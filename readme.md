@@ -18,3 +18,18 @@
     오류 페이지 요청 전용 필터를 적용하고 싶으면 'DispatcherType.ERROR'만 지정하면 된다.'
 </p>
 <hr>
+
+<h2>스프링 부트 - 오류 페이지2</h2>
+<h3>스프링 부트 오류 관련 옵션</h3>
+* server.error.whitelabel.enabled=true : 오류 처리 화면을 못 찾을 시, 스프링 whitelabel 오류 페이지 적용
+* server.error.path=/error : 오류 페이지 경로, 스프링이 자동 등록하는 서블릿 글로벌 오류 페이지 경로와 'BasicErrorController' 오류 컨트롤러 경로에 함께 사용된다.
+
+<h3>확장 포인트</h3>
+* 에러 공통처리 컨트롤러의 기능을 변경하고 싶으면 'ErrorController' 인터페이스를 상속 받아서 구현하거나 'BasicErrorController' 상속 받아서 기능을 추가하면 된다. 
+
+<p>
+server.error.include-exception=true <br>
+server.error.include-message=on_param <br>
+server.error.include-stacktrace=on_param <br>
+server.error.include-binding-errors=on_param <br>
+</p>
